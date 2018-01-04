@@ -24,49 +24,63 @@ fileManagerClose.onclick=function(){
 
 }
 //fileManager mouse & move
-fileManagerHeader.onmousedown=function(e){
-  let startX=e.clientX-fileManager.offsetLeft
-  let startY=e.clientY-fileManager.offsetTop
-  document.onmousemove=function(e){
-    fileManager.style.left=e.clientX-startX+"px"
-    fileManager.style.top=e.clientY-startY+"px"
-    //window up to max
-    if((e.clientY)/document.body.clientHeight<0.06){
-      fileManager.style.top='5%'
-      fileManager.style.left="0px"
-      fileManager.style.width="100vw"
-      fileManager.style.height="95%"
-    }else{
-      fileManager.style.width="60vw"
-      fileManager.style.height="30vw"
-    }
-    //window left right to max
-    if(e.clientX/document.body.clientWidth<0.01){
-      fileManager.style.top="5%"
-      fileManager.style.left="0"
-      fileManager.style.width="50vw"
-      fileManager.style.height="95%"
-    }
-    if(e.clientX/document.body.clientWidth>0.99){
-      fileManager.style.top="5%"
-      fileManager.style.left="50vw"
-      fileManager.style.width="50vw"
-      fileManager.style.height="95%"
-    }
-  }
-  document.onmouseup=function(){
-    document.onmousemove=null
-    document.onmouseup=null
-  }
-}
-//set window size
 fileManager.onmouseover=function(e){
   if(e.clientX-fileManager.offsetLeft<4){
     fileManager.style.cursor="w-resize"
   }else{
     fileManager.style.cursor="point"
   }
+  fileManagerHeader.onmousedown=function(e){
+    let startX=e.clientX-fileManager.offsetLeft
+    let startY=e.clientY-fileManager.offsetTop
+    document.onmousemove=function(e){
+      fileManager.style.left=e.clientX-startX+"px"
+      fileManager.style.top=e.clientY-startY+"px"
+      //window up to max
+      if((e.clientY)/document.body.clientHeight<0.06){
+        fileManager.style.top='5%'
+        fileManager.style.left="0px"
+        fileManager.style.width="100vw"
+        fileManager.style.height="95%"
+      }else{
+        fileManager.style.width="60vw"
+        fileManager.style.height="30vw"
+      }
+      //window left right to max
+      if(e.clientX/document.body.clientWidth<0.01){
+        fileManager.style.top="5%"
+        fileManager.style.left="0"
+        fileManager.style.width="50vw"
+        fileManager.style.height="95%"
+      }
+      if(e.clientX/document.body.clientWidth>0.99){
+        fileManager.style.top="5%"
+        fileManager.style.left="50vw"
+        fileManager.style.width="50vw"
+        fileManager.style.height="95%"
+      }
+    }
+    document.onmouseup=function(){
+      document.onmousemove=null
+      document.onmouseup=null
+    }
+  }
 }
+//set window size
+// fileManager.onmouseover=function(e){
+//   if(e.clientX-fileManager.offsetLeft<4){
+//     fileManager.style.cursor="w-resize"
+//   }else{
+//     fileManager.style.cursor="point"
+//   }
+//   document.onmousedown=function(e){
+//     var resizeStartX=e.clientX
+//     document.onmousemove=function(e){
+//       fileManager.style.left=resizeStartX-e.clientX
+//       fileManager.style.width+=resizeStartX-e.clientX
+//     }
+//   }
+// }
 //drag
 let fileIcon=document.getElementsByClassName("file-1")
 for(let i=0;i<fileIcon.length;i++){
