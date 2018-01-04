@@ -1,0 +1,155 @@
+html{
+  overflow:hidden;
+}
+ul,li,div,body{
+  margin:0;
+  padding:0;
+  color:#808080;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+}
+header{
+  /*display:flex;
+  justify-content:space-between;
+  align-items:center;*/
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:4.9vh;
+  line-height:4.9vh;
+  box-shadow:0 7px 5px #cfcfcf;
+  background-color:#ffffff;
+}
+.header-logo-container{
+  float:left;
+  display:block;
+  width:8%;
+  font-style:normal;
+}
+.logo{
+  font-size: 14px;
+  margin-left:18%;
+  text-shadow:3px 1px 4px #808080;
+  cursor:pointer;
+}
+.header-logo-list{
+  z-index:1000;
+  display: none;
+  /*position:absolute;
+  top:30px;
+  left:0;*/
+  width:100%;
+  padding-left:0.6em;
+  padding-right:0.6em;
+  padding-bottom:0.55em;
+  box-shadow:1px 7px 5px #cfcfcf;
+  background-color:#ffffff;
+}
+.header-logo-list ul{
+  list-style:none;
+}
+.header-logo-list ul li  /*display:flex;
+  justify-content:space-between;
+  align-items:center;*/{
+  display:block;
+  width:100%;
+  text-align:center;
+  cursor:pointer;
+}
+.header-logo-list ul li:hover{
+  text-shadow:0 0 1px #808080;
+  color:#cfcfcf
+}
+.header-logo-list ul li i{
+  display:block;
+  width:100%;
+  height:0px;
+  border:1px solid #cfcfcf;
+  border-radius:50%;
+}
+.icon{
+  float:left;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon>i{
+  display:block;
+  margin-left:13px;
+  cursor:pointer;
+}
+.icon>i:hover{
+  box-shadow:2px 7px 5px #cfcfcf;
+}
+.icon-first{
+  width: 19px;
+  height: 19px;
+  background-color:#808080;
+  border-radius:50%;
+}
+.icon-second{
+  width: 19px;
+  height: 19px;
+  background-color:#808080;
+}
+.icon-third{
+  width:9px;
+  height:9px;
+  border-radius: 20%;
+  border:5px solid #808080;
+}
+.time{
+  float:right;
+  margin-right:1%;
+}
+.main{
+  width:100%;
+  height:95%;
+}
+.file-manager{
+  position:absolute;
+  display:none;
+  flex-direction:column;
+  justify-content: space-between;
+  top:10%;
+  left:10%;
+  width:60vw;
+  height: 30vw;
+  background-color:#ffffff;
+  border-radius:3px;
+  border:1px solid #cfcfcf;
+  box-shadow:1px 7px 5px #cfcfcf;
+}
+.file-manager-header{
+  display:flex;
+  justify-content: flex-end;
+  align-items:center;
+  width: 100%;
+  height:3vw;
+  background-color:#cfcfcf;
+}
+.file-manager-header-close{
+  display:block;
+  margin-right:1vw;
+  width:1.5vw;
+  height: 1.5vw;
+  border-radius: 100%;
+  background-color: #ffffff;
+  cursor:pointer;
+}
+.file-main-content{
+  width: 100%;
+  height: 100%;
+}
+.file-1{
+  width:1.6vw;
+  height:1.6vw;
+  background-color:#808080;
+  border-radius:5%;
+  margin:1%;
+  cursor:pointer;
+}
